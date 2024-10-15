@@ -1,0 +1,45 @@
+.carousel-item img {
+  object-fit: contain; /* Ensures the image covers the entire area */
+  height: 200px; /* Fixed height for all carousel images */
+  width: 100%; /* Ensures the image takes the full width of the carousel item */
+}
+
+/* Animation keyframes for the left content */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+    scale: 90%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation keyframes for the right content */
+@keyframes slideInRight {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+    scale: 90%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} 
+
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+
+.btn-primary {
+  background-color: #000000 !important; /* Black background */
+  border-color: #000000 !important;      /* Black border */
+}

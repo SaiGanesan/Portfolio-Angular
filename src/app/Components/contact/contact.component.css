@@ -1,0 +1,44 @@
+.contact-page {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 900px; /* Set max-width to ensure the content stays within a reasonable size */
+  margin: 0 auto; /* Center the content */
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-details h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #000000;
+}
+
+.text-center {
+  margin-bottom: 20px;
+}
+
+.container-fluid {
+  padding: 40px 0;
+}
+

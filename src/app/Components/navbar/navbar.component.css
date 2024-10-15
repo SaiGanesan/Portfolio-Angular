@@ -1,0 +1,161 @@
+/* Navbar Styling */
+.navbar {
+  background-color: #000;  /* Black background */
+  padding: 10px 0;
+}
+
+.navbar-brand.name,
+.navbar-brand.title {
+  color: #f5f5dc;  /* Cream white text */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+#sub{
+  font-weight: lighter;
+}
+
+#sub:hover{
+  transform: scale(1);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.04);
+}
+
+.title {
+  font-family: "Times New Roman", serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #f5f5dc;  /* Cream white links */
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Vertical Line Between Items */
+.vertical-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 24px;
+  border-right: 1px solid #ccc;
+}
+
+/* Nav Items */
+.nav-item {
+  position: relative;
+  padding: 0 12px;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover {
+  background-color: #333;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  padding: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar-nav {
+  display: flex; /* Ensure flexbox layout for navbar items */
+}
+
+.navbar-items {
+  display: flex; /* Ensure items are on the same line */
+  flex-direction: row; /* Keep items in a row */
+  align-items: center; /* Center items vertically */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .name {
+    font-size: 1.1rem;
+    margin-right: 5px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+    transition: left 0.3s ease;
+    backdrop-filter: blur(90px);
+    overflow-y: hidden;
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  .navbar-items {
+    margin-top: 35%;
+    flex-direction: column;
+  }
+}

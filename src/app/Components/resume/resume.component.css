@@ -1,0 +1,128 @@
+.vertical-line {
+  position: relative;
+}
+
+.vertical-line::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+.dot {
+  position: relative;
+}
+
+.dot::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+h5 {
+  font-size: 1em;
+  color: black; /* Font color is already black */
+  letter-spacing: 2px;
+  text-align: right;
+  padding-left: 10px;
+}
+
+/* Change font color for all headings and paragraphs to black */
+h1, h2, h3, h4, p {
+  color: black; /* Change the color for headings and paragraphs to black */
+}
+
+/* Animation keyframes for the left content */
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-30%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Animation keyframes for the right content */
+@keyframes slideInRight {
+  from {
+      transform: translateX(30%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Animation keyframes for dot */
+@keyframes slideUp {
+  from {
+      transform: translateY(50%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Animation Application */
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-dot {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.bg-windows {
+  background-color: #08a1f7; 
+}
+
+.bg-linux {
+  background-color: #FCC624;
+}
+
+@keyframes slideUp2 {
+  0% {
+      transform: translateY(30%) scale(0.98);
+      opacity: 0;
+  }
+  60% {
+      transform: translateY(-10%) scale(1.01);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+  }
+}
+
+.animate-skills-card {
+  animation: slideUp2 1s ease-out forwards;
+}
+
+.skills-card:hover .card {
+  transform: translateY(-10px) scale(1.06);
+  transition: transform 0.3s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6, p, .text-muted {
+  color: black !important; /* Override any existing color */
+}

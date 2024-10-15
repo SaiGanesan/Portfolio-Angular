@@ -1,0 +1,130 @@
+/* Ensure the background gradient covers the full viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+/* Apply the animated background gradient */
+body {
+  background: linear-gradient(90deg, #fff69f, #fdd870, #d0902f, #a15501, #351409);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container styling */
+.container-fluid {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding: 50px 30px;
+  }
+
+  .col-md-8 {
+    text-align: center;
+  }
+
+  .img-fluid {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Profile image styling */
+.rounded-square {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+/* Circle buttons */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.circle:nth-child(1) {
+  background-color: #000000;
+  animation: moveUp 1s ease-in-out forwards 1s;
+}
+
+.circle:nth-child(2) {
+  background-color: #000000;
+  animation: moveUp 1.3s ease-out forwards;
+}
+
+.circle:nth-child(3) {
+  background-color: #000000;
+  animation: moveUp 1.7s ease-out forwards;
+}
+
+.circle:hover {
+  cursor: pointer;
+  background-color: #f88f07 !important;
+  transform: scale(1.05);
+  border: 2px solid white;
+}
+
+/* Animation for circle elements */
+@keyframes moveUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text styling */
+h1, h3, p {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

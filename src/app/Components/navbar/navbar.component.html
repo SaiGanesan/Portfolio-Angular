@@ -1,0 +1,32 @@
+<nav class="navbar fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <div class="d-flex align-items-baseline">
+        <a class="navbar-brand name" routerLink="/summary">Sai Ganesan M</a>
+        <a class="navbar-brand title" id="sub">&nbsp;Engineering Graduate</a>
+      </div>
+    </div>
+    <div>
+      <ul class="navbar-nav ms-auto d-flex flex-row align-items-center"> <!-- Added align-items-center here -->
+        <div class="navbar-menu" [class.active]="menuActive">
+          <div class="navbar-items">
+            <li class="nav-item">
+              <a class="nav-link vertical-line" routerLink="/resume" (click)="closeMenu()">Resume &nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item vertical-line">
+              <a class="nav-link" routerLink="/projects" (click)="closeMenu()">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact" (click)="closeMenu()">&nbsp;Contact</a>
+            </li>
+          </div>
+        </div>
+        <div class="hamburger" (click)="toggleMenu()" [class.active]="menuActive">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

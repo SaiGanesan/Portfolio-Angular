@@ -1,0 +1,37 @@
+.footer {
+    background-color: black; /* Set background to black */
+    color: #f5f5dc; /* Set default text color to cream white */
+    z-index: 999;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+}
+
+.footer a {
+    color: #f5f5dc; /* Set link color to cream white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+    color: #fff; /* Change link color to white on hover */
+}
+
+.footer h5 {
+    color: #f5f5dc; /* Set heading color to cream white */
+}
+
+.footer .fa {
+    color: #f5f5dc; /* Change icon color to cream white */
+}
+
+.footer-text {
+    margin-bottom: 5px; 
+    margin-top: 0;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    color: #f5f5dc; /* Ensure footer text is cream white */
+}
+
+.footer p {
+    color: #f5f5dc; /* Set paragraph text color to cream white */
+}
